@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply text-foreground;
+    margin: 0;
+    min-height: 100vh;
+    background: radial-gradient(circle at top left, rgba(96, 165, 250, 0.16), transparent 32%),
+      radial-gradient(circle at top right, rgba(16, 185, 129, 0.12), transparent 26%),
+      linear-gradient(180deg, #f8fafc 0%, #eff6ff 100%);
+    color: #0f172a;
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply rounded-2xl border border-slate-100 bg-white/90 p-6 shadow-sm backdrop-blur-md;
+  }
+  .glass-panel {
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(18px);
+    box-shadow: 0 30px 80px rgba(15, 23, 42, 0.1);
+  }
+  .pill-dark {
+    @apply inline-flex items-center justify-center rounded-full bg-slate-900 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-slate-900/20 transition hover:-translate-y-0.5 hover:bg-slate-800;
+  }
+  .pill-outline {
+    @apply inline-flex items-center justify-center rounded-full border border-slate-200 bg-white px-6 py-3 text-sm font-semibold text-slate-900 shadow-sm transition hover:-translate-y-0.5 hover:border-slate-300;
+  }
+  .badge-green {
+    @apply inline-flex items-center gap-2 rounded-full bg-emerald-500 px-4 py-1.5 text-sm font-semibold text-white;
+  }
+  .card-3d {
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+  }
+  .card-3d:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 40px 90px rgba(15, 23, 42, 0.16);
+  }
+}
+
+.leaflet-container {
+  font-family: Inter, sans-serif;
+  border-radius: 1rem;
+}
