@@ -80,7 +80,7 @@ export default function App() {
     <main className="mx-auto max-w-6xl px-4 py-8 sm:px-6 lg:px-8">
       <div className="mb-6 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2 text-sm font-semibold text-slate-500 hover:text-slate-900">
-          <ArrowLeft className="h-4 w-4" /> FarmVista
+          <ArrowLeft className="h-4 w-4" /> AgroVani
         </Link>
         <div className="flex items-center gap-2">
           {[1, 2, 3].map((s) => (

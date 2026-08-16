@@ -93,7 +93,7 @@ export default function App() {
       {/* Header */}
       <div className="mb-6 flex flex-wrap items-center justify-between gap-4">
         <Link href="/" className="flex items-center gap-2 text-sm font-semibold text-slate-500 hover:text-slate-900">
-          <ArrowLeft className="h-4 w-4" /> FarmVista
+          <ArrowLeft className="h-4 w-4" /> AgroVani
         </Link>
         <div className="flex items-center gap-3">
           <span className="text-sm text-slate-500">Farm:</span>

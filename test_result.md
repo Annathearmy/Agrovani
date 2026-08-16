@@ -102,7 +102,7 @@
 # Testing Data - Main Agent and testing sub agent both should log testing data below this section
 #====================================================================================================
 
-user_problem_statement: "FarmVista (Annam.ai) - agri-intelligence app: live Meteoblue ERA5LAND weather -> biostimulant abiotic stress engine (cardinal temperature formulas), Syngenta CE Hub spray window, residue/stubble economics, interactive Leaflet map, farmer onboarding + 2-tab dashboard. Adapted from provided TS/Prisma codebase into this JS/MongoDB/Next15 environment."
+user_problem_statement: "AgroVani (Annam.ai) - agri-intelligence app: live Meteoblue ERA5LAND weather -> biostimulant abiotic stress engine (cardinal temperature formulas), Syngenta CE Hub spray window, residue/stubble economics, interactive Leaflet map, farmer onboarding + 2-tab dashboard. Adapted from provided TS/Prisma codebase into this JS/MongoDB/Next15 environment."
 
 backend:
   - task: "Seed endpoint (POST /api/seed) - farms, machinery, district_metrics"

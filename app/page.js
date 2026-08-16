@@ -23,7 +23,7 @@ export default function App() {
       <header className="relative mx-auto flex max-w-7xl items-center justify-between px-4 py-6 sm:px-6 lg:px-8">
         <div className="flex items-center gap-2 text-lg font-bold tracking-tight text-slate-900">
           <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-slate-900 text-white">🌾</span>
-          FarmVista
+          AgroVani
         </div>
         <div className="flex items-center gap-1 rounded-full bg-white/70 p-1 shadow-sm backdrop-blur">
           {LOCALES.map((l) => (
@@ -79,7 +79,7 @@ export default function App() {
             />
             <div className="mt-4 flex items-center justify-between rounded-2xl bg-slate-900/5 p-4">
               <div>
-                <p className="text-xs uppercase tracking-[0.3em] text-slate-500">FarmVista</p>
+                <p className="text-xs uppercase tracking-[0.3em] text-slate-500">AgroVani</p>
                 <p className="mt-2 text-2xl font-semibold text-slate-950">Live field insights</p>
               </div>
               <span className="badge-green">{t.farms}</span>

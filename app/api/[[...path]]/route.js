@@ -76,7 +76,7 @@ async function handleRoute(request, { params }) {
     const db = await connectToMongo()
 
     if ((route === '/' || route === '/root') && method === 'GET') {
-      return ok({ message: 'FarmVista API', crops: CROP_LIST })
+      return ok({ message: 'AgroVani API', crops: CROP_LIST })
     }
 
     // Seed database with demo farms/machinery/metrics
