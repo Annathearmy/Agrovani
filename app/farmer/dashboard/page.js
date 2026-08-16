@@ -56,15 +56,27 @@ export default function App() {
   useEffect(() => {
     const p = typeof window !== 'undefined' ? new URLSearchParams(window.location.search).get('tab') : null
     if (p === 'crop') setTab('crop')
-    fetch('/api/farms')
-      .then((r) => r.json())
-      .then((list) => {
-        setFarms(list)
+
+    async function loadFarms() {
+      try {
+        let res = await fetch('/api/farms')
+        let list = await res.json()
+        // If DB is empty or returned an error object, seed then refetch.
+        if (!Array.isArray(list) || list.length === 0) {
+          await fetch('/api/seed', { method: 'POST' })
+          res = await fetch('/api/farms')
+          list = await res.json()
+        }
+        const farmsArr = Array.isArray(list) ? list : []
+        setFarms(farmsArr)
         const savedId = typeof window !== 'undefined' ? localStorage.getItem('fv_farmId') : null
-        const initial = list.find((f) => f.id === savedId) || list[0]
+        const initial = farmsArr.find((f) => f.id === savedId) || farmsArr[0] || null
         setFarm(initial)
-      })
-      .catch(() => {})
+      } catch (e) {
+        setFarms([])
+      }
+    }
+    loadFarms()
   }, [])
 
   const loadData = useCallback((f) => {
